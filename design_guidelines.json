@@ -1,0 +1,112 @@
+{
+  "project_context": {
+    "domain": "Medical Clinic / Doctor Portfolio",
+    "theme_mode": "LIGHT",
+    "archetype": "1 (Organic & Earthy adapted for Medical Clinical)",
+    "tone": "Professional, trustworthy, patient-friendly, calm",
+    "key_fonts": "Outfit (Headings), Manrope (Body)"
+  },
+  "colors": {
+    "primary": "#0F2C59",
+    "secondary": "#E6F4F1",
+    "accent_blue": "#2563EB",
+    "background_base": "#FAFCFF",
+    "surface_white": "#FFFFFF",
+    "text_dark": "#1E293B",
+    "text_muted": "#475569",
+    "danger_red": "#EF4444",
+    "success_green": "#10B981"
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif"
+    },
+    "scales": {
+      "h1": "text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#0F2C59] leading-[1.1]",
+      "h2": "text-3xl md:text-4xl font-semibold tracking-tight text-[#0F2C59] leading-tight",
+      "h3": "text-xl md:text-2xl font-medium text-[#0F2C59]",
+      "h4": "text-lg md:text-xl font-medium text-[#1E293B]",
+      "body_large": "text-lg text-[#475569] leading-relaxed",
+      "body_base": "text-base text-[#475569] leading-relaxed",
+      "small_label": "text-sm uppercase tracking-[0.1em] font-semibold text-[#2563EB]"
+    }
+  },
+  "spacing_and_layout": {
+    "global_padding": "py-20 md:py-28 px-6 md:px-12 max-w-7xl mx-auto",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12",
+    "card_padding": "p-8 md:p-10",
+    "section_gap": "gap-16 md:gap-24"
+  },
+  "surfaces_and_borders": {
+    "card": "bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-xl hover:border-blue-100 transition-all duration-300",
+    "glass_header": "bg-white/80 backdrop-blur-xl border-b border-slate-200/50",
+    "image_wrapper": "rounded-3xl overflow-hidden shadow-2xl shadow-slate-200/50"
+  },
+  "components_instructions": [
+    {
+      "name": "TopEmergencyBanner",
+      "type": "layout",
+      "notes": "Thin banner at the very top (above navbar). bg-[#EF4444] or bg-[#0F2C59]. Text: 'Emergency? Call 24/7: +91 98765 43210'. White text, text-sm, centered. Must include a data-testid='emergency-banner'."
+    },
+    {
+      "name": "StickyNavbar",
+      "type": "layout",
+      "notes": "Fixed top-0 w-full z-50 glass_header. Logo left. Desktop nav links center (text-[#0F2C59] hover:text-[#2563EB]). Right side: 'Call Now' button (visible on mobile too) + 'Book Appointment' button (desktop). Use Shadcn Sheet for mobile menu. data-testid='main-navbar'."
+    },
+    {
+      "name": "HeroSection",
+      "type": "section",
+      "notes": "Bento layout (12 cols). Left (col-span-1 to 7): overline '15 YEARS OF EXCELLENCE', H1 'Your Health, Our Priority', subtext intro to Dr. Rajesh Sharma. Buttons: 'Book Appointment' (primary blue) and 'Our Services' (secondary soft blue). Right (col-span-8 to 12): image of doctor in image_wrapper with soft subtle abstract background element."
+    },
+    {
+      "name": "AboutSection",
+      "type": "section",
+      "notes": "Grid 2 cols. Left: Modern clinic image. Right: H2 'About Dr. Rajesh Sharma', qualifications (MBBS, MD Cardiology), 15 years experience, patient philosophy text. Add small checkmark list for 'Achievements'."
+    },
+    {
+      "name": "ServicesCards",
+      "type": "section",
+      "notes": "Grid 1 md:grid-cols-3. Cards for 'Cardiac Consultation', 'ECG & Echo', 'Angioplasty'. Use Lucide icons (HeartPulse, Activity, Stethoscope) in a soft blue circular wrapper (bg-[#E6F4F1] text-[#2563EB]). Cards must use the 'card' surface style."
+    },
+    {
+      "name": "Testimonials",
+      "type": "section",
+      "notes": "bg-[#FAFCFF] full width. Title 'Patient Stories'. Masonry or flex row of 3 testimonial cards. Include 5 yellow stars (lucide Star fill) and patient name."
+    },
+    {
+      "name": "AppointmentBooking",
+      "type": "section",
+      "notes": "Use Shadcn forms (Input, Select, Textarea). Fields: Name, Phone, Email, Preferred Date (use Shadcn Calendar/DatePicker if possible, or native date input with custom styling), Time slot, Message. Submit button 'Confirm Booking'. Below form, add a large full-width button 'Book instantly via WhatsApp' (bg-[#25D366] text-white)."
+    },
+    {
+      "name": "FloatingWhatsApp",
+      "type": "ui",
+      "notes": "Fixed bottom-6 right-6 z-50. bg-[#25D366] rounded-full p-4 shadow-lg hover:scale-110 transition-transform. data-testid='floating-whatsapp'."
+    },
+    {
+      "name": "FooterContact",
+      "type": "layout",
+      "notes": "bg-[#0F2C59] text-white. 2 or 3 cols. Col 1: Brand/Logo, Address in Mumbai, Phone, Email. Col 2: Working Hours. Col 3: Google Maps iframe embed (w-full h-48 rounded-xl). text-white/80 for body."
+    }
+  ],
+  "buttons": {
+    "primary": "inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#2563EB] text-white font-semibold hover:bg-[#1D4ED8] transition-all shadow-lg shadow-blue-500/30",
+    "secondary": "inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#E6F4F1] text-[#0F2C59] font-semibold hover:bg-[#D1EAE5] transition-all",
+    "outline": "inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-[#E6F4F1] text-[#0F2C59] font-semibold hover:bg-[#E6F4F1] transition-all"
+  },
+  "media_urls": {
+    "hero_doctor": "https://images.pexels.com/photos/19438563/pexels-photo-19438563.jpeg",
+    "about_clinic": "https://images.pexels.com/photos/12081340/pexels-photo-12081340.jpeg",
+    "services_stethoscope": "https://images.pexels.com/photos/7578812/pexels-photo-7578812.jpeg",
+    "abstract_blue_bg": "https://images.pexels.com/photos/7605652/pexels-photo-7605652.jpeg"
+  },
+  "motion_and_interaction": {
+    "hover": "Scale up images slightly inside overflow-hidden wrappers on hover. Lift cards by -2px and increase shadow.",
+    "entrance": "Staggered fade-in-up for lists and grids (can be handled via simple CSS animations or framer-motion if used).",
+    "scroll": "Smooth scrolling enabled."
+  },
+  "testing": {
+    "attributes": "Add data-testid to all CTA buttons, form inputs, form submit buttons, nav links, floating buttons."
+  }
+}
