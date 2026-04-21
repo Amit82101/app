@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { Menu, Phone, HeartPulse } from "lucide-react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from "./ui/sheet";
 import { NAV_LINKS, CLINIC } from "../lib/doctor";
 
 export default function Navbar() {
@@ -98,6 +98,9 @@ export default function Navbar() {
                 <SheetTitle className="text-left text-[#0F2C59] font-semibold">
                   Dr. Rajesh Sharma
                 </SheetTitle>
+                <SheetDescription className="text-left text-[#475569]">
+                  Cardiologist · Mumbai
+                </SheetDescription>
               </SheetHeader>
               <div className="mt-6 flex flex-col gap-1">
                 {NAV_LINKS.map((link) => (
