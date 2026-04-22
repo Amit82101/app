@@ -80,7 +80,7 @@ export default function Contact() {
         </div>
 
         <div className="lg:col-span-3">
-          <div className="rounded-3xl overflow-hidden border border-slate-100 shadow-sm h-full min-h-[450px]">
+          <div className="rounded-3xl overflow-hidden border border-slate-100 shadow-sm h-full min-h-[450px] relative">
             <iframe
               title="Clinic location on Google Maps"
               data-testid="google-maps-embed"
@@ -92,6 +92,15 @@ export default function Contact() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
+            <a
+              href={CLINIC.mapsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="get-directions-btn"
+              className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#0F2C59] shadow-lg hover:bg-[#E6F4F1] transition-colors"
+            >
+              <MapPin className="h-4 w-4 text-[#2563EB]" /> Get Directions
+            </a>
           </div>
         </div>
       </section>

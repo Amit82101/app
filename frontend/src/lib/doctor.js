@@ -21,11 +21,11 @@ export const DOCTOR = {
 
 export const CLINIC = {
   name: "Healing Hands Physiotherapy Clinic",
-  addressLine1: "Newtown, Madanapalli",
-  addressLine2: "Jamtara",
+  addressLine1: "Healing Hands Physiotherapy Center",
+  addressLine2: "Newtown, Madanapalle",
   city: "Jamtara",
   state: "Jharkhand",
-  pincode: "",
+  pincode: "815351",
   phone: "+91 78705 05926",
   phoneRaw: "+917870505926",
   whatsapp: "917870505926", // digits only for wa.me
@@ -36,7 +36,9 @@ export const CLINIC = {
     { day: "Sunday", time: "9:00 AM – 1:00 PM" },
   ],
   mapsEmbed:
-    "https://www.google.com/maps?q=Jamtara%2C%20Jharkhand&output=embed",
+    "https://maps.google.com/maps?q=Healing+Hands+Physiotherapy+Center+Newtown+Madanapalle+Jamtara+Jharkhand+815351&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  mapsLink:
+    "https://share.google/vL9mp8Lxwt4QZpxdi",
 };
 
 // Professional roles & foundations
