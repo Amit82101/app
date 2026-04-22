@@ -4,7 +4,7 @@ import { buildWhatsAppUrl } from "../lib/doctor";
 export default function FloatingWhatsApp() {
   return (
     <a
-      href={buildWhatsAppUrl("Hi Dr. Sharma, I'd like to book an appointment.")}
+      href={buildWhatsAppUrl("Hi Dr. Chand, I'd like to book an appointment.")}
       target="_blank"
       rel="noopener noreferrer"
       data-testid="floating-whatsapp"

@@ -1,29 +1,29 @@
 import { Link } from "react-router-dom";
 import {
-  HeartPulse,
+  Bone,
+  Hand,
+  Syringe,
+  Dumbbell,
   Activity,
-  Stethoscope,
   ShieldCheck,
-  Droplets,
-  ClipboardList,
-  CheckCircle2,
   Star,
   ArrowRight,
   Award,
-  Users,
+  Building2,
   Calendar,
   Phone,
+  Sparkles,
 } from "lucide-react";
 
 import { DOCTOR, SERVICES, TESTIMONIALS, CLINIC, buildWhatsAppUrl } from "../lib/doctor";
 
 const iconMap = {
-  HeartPulse,
+  Bone,
+  Hand,
+  Syringe,
+  Dumbbell,
   Activity,
-  Stethoscope,
-  ShieldHeart: ShieldCheck,
-  Droplets,
-  ClipboardHeart: ClipboardList,
+  ShieldCheck,
 };
 
 export default function Home() {
@@ -39,17 +39,17 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-20 md:pb-28 grid gap-12 lg:grid-cols-12 items-center">
           <div className="lg:col-span-7 fade-in-up">
             <span className="inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-[#2563EB]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
-              15 Years of Cardiac Excellence
+              <Sparkles className="h-3.5 w-3.5" />
+              {DOCTOR.overline}
             </span>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#0F2C59] leading-[1.05]">
               Your Health,<br />
               <span className="text-[#2563EB]">Our Priority.</span>
             </h1>
             <p className="mt-6 text-base md:text-lg text-[#475569] leading-relaxed max-w-xl">
-              Meet {DOCTOR.name}, a trusted {DOCTOR.title.toLowerCase()} in {CLINIC.city} who combines{" "}
-              {DOCTOR.experience} years of expertise with genuinely caring,
-              one-on-one attention for every patient.
+              Meet <b>{DOCTOR.name}</b> — Director of Healing Hands Physiotherapy
+              Centre, Jamtara. Advanced orthopaedic physiotherapy, manual therapy
+              and sports rehabilitation for patients across Jharkhand.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
@@ -71,8 +71,8 @@ export default function Home() {
             {/* Quick stats */}
             <div className="mt-12 grid grid-cols-3 gap-4 max-w-lg">
               {[
-                { icon: Users, label: "5K+ Patients" },
-                { icon: Award, label: "15 Yrs Exp." },
+                { icon: Award, label: "3× Award Winner" },
+                { icon: Building2, label: "Director-led" },
                 { icon: Calendar, label: "Same-day Appt." },
               ].map(({ icon: Icon, label }) => (
                 <div
@@ -92,19 +92,19 @@ export default function Home() {
               <div className="rounded-[2rem] overflow-hidden shadow-2xl shadow-slate-300/60 border-4 border-white">
                 <img
                   src={DOCTOR.photo}
-                  alt={`${DOCTOR.name}, ${DOCTOR.title}`}
-                  className="w-full h-[460px] object-cover"
+                  alt={`${DOCTOR.name}, Physiotherapist`}
+                  className="w-full h-[460px] object-cover object-top"
                   loading="eager"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 md:-left-10 rounded-2xl bg-white p-4 shadow-xl border border-slate-100 flex items-center gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#E6F4F1]">
-                  <HeartPulse className="h-5 w-5 text-[#2563EB]" />
+                  <Bone className="h-5 w-5 text-[#2563EB]" />
                 </span>
                 <div>
-                  <div className="text-xs text-[#475569]">Board Certified</div>
+                  <div className="text-xs text-[#475569]">Ortho Specialist</div>
                   <div className="text-sm font-semibold text-[#0F2C59]">
-                    MBBS, MD, DM Cardiology
+                    {DOCTOR.credentials}
                   </div>
                 </div>
               </div>
@@ -118,10 +118,10 @@ export default function Home() {
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <div>
             <div className="text-sm uppercase tracking-[0.12em] font-semibold text-[#2563EB]">
-              About the Doctor
+              About the Director
             </div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-[#0F2C59]">
-              Honest advice. Gentle hands. Long-term care.
+              Hands-on healing. Honest care. Lasting results.
             </h2>
             <p className="mt-5 text-base md:text-lg text-[#475569] leading-relaxed">
               {DOCTOR.shortBio}
@@ -131,13 +131,13 @@ export default function Home() {
               data-testid="home-about-link"
               className="mt-6 inline-flex items-center gap-2 text-[#2563EB] font-semibold hover:gap-3 transition-all"
             >
-              Read Dr. Sharma's story <ArrowRight className="h-4 w-4" />
+              Read {DOCTOR.shortName}'s story <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="rounded-3xl overflow-hidden border border-slate-100 shadow-xl">
             <img
               src={DOCTOR.clinicPhoto}
-              alt="Modern clinic interior"
+              alt="Modern physiotherapy clinic interior"
               className="w-full h-[340px] object-cover"
               loading="lazy"
             />
@@ -154,7 +154,7 @@ export default function Home() {
                 What we treat
               </div>
               <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-[#0F2C59]">
-                Comprehensive heart care, under one roof
+                Comprehensive physiotherapy, under one roof
               </h2>
             </div>
             <Link
@@ -166,8 +166,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.slice(0, 6).map((s) => {
-              const Icon = iconMap[s.icon] || HeartPulse;
+            {SERVICES.map((s) => {
+              const Icon = iconMap[s.icon] || Bone;
               return (
                 <article
                   key={s.title}
@@ -193,7 +193,7 @@ export default function Home() {
             Patient Stories
           </div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-[#0F2C59]">
-            Trusted by thousands across Mumbai
+            Trusted by patients across Jharkhand
           </h2>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -225,7 +225,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* EMERGENCY CTA BANNER */}
+      {/* CTA BANNER */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-28">
         <div
           data-testid="emergency-cta"
@@ -238,14 +238,16 @@ export default function Home() {
           <div className="relative grid gap-8 lg:grid-cols-2 items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-[#9FD5F5]">
-                <span className="h-2 w-2 rounded-full bg-red-400 animate-pulse" />
-                24/7 Emergency Helpline
+                <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
+                Need urgent pain relief?
               </div>
               <h2 className="mt-4 text-3xl md:text-4xl font-semibold leading-tight">
-                Chest pain or breathing trouble? Don't wait.
+                Don't live with pain. Book your session today.
               </h2>
               <p className="mt-3 text-white/80 max-w-lg">
-                Early action saves lives. Call our emergency line and our team will guide you to the nearest partner hospital immediately.
+                From acute back pain to post-operative rehab, early intervention
+                speeds recovery. Call or message Healing Hands — we'll find a slot
+                for you.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
@@ -257,7 +259,7 @@ export default function Home() {
                 <Phone className="h-4 w-4" /> Call {CLINIC.phone}
               </a>
               <a
-                href={buildWhatsAppUrl("Hi, this is an urgent query for Dr. Sharma.")}
+                href={buildWhatsAppUrl(`Hi ${DOCTOR.shortName}, I need to book a physiotherapy session.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="emergency-whatsapp-btn"

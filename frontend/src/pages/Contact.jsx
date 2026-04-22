@@ -69,7 +69,7 @@ export default function Contact() {
           />
 
           <a
-            href={buildWhatsAppUrl("Hi Dr. Sharma, I have a general question.")}
+            href={buildWhatsAppUrl("Hi Dr. Chand, I have a general question.")}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="contact-whatsapp-btn"

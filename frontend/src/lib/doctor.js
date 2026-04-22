@@ -1,106 +1,149 @@
 // Doctor profile & clinic configuration (single source of truth)
 export const DOCTOR = {
-  name: "Dr. Rajesh Sharma",
-  title: "Cardiologist",
-  credentials: "MBBS, MD (Cardiology), DM (Interventional Cardiology)",
+  name: "Dr. Bhaskar Chand",
+  shortName: "Dr. Chand",
+  title: "Physiotherapist (Ortho) · Director",
+  subtitle: "BPT, MPT (Ortho), COMT, CDNP, CSCS",
+  credentials: "BPT, MPT (Orthopaedics) · COMT · CDNP · CSCS",
   tagline: "Your Health, Our Priority",
-  experience: 15,
+  overline: "Award-Winning Physiotherapist",
   shortBio:
-    "Board-certified cardiologist with over 15 years of experience delivering compassionate, evidence-based heart care to patients across Mumbai. Committed to accurate diagnosis, minimally invasive treatment, and lifelong wellness.",
+    "Dr. Bhaskar Chand is a renowned orthopaedic physiotherapist and healthcare leader from Jharkhand. As the Director of Healing Hands Physiotherapy Centre, Jamtara, he is dedicated to bringing advanced, evidence-based physiotherapy and hands-on rehabilitation to the region.",
+  longBio:
+    "In addition to leading Healing Hands, Dr. Chand serves as the Central Head (Jharkhand) of the Physio Art Welfare Foundation, actively working to raise physiotherapy standards across the state and support fellow physiotherapists. His work blends manual therapy, dry needling and sports-science-backed conditioning to help patients move better, recover faster and live stronger — without over-reliance on medication.",
   philosophy:
-    "Every heartbeat matters. I believe in listening before prescribing, explaining before treating, and supporting patients through every step of their recovery with honesty and warmth.",
+    "Movement is medicine. I believe in listening carefully, diagnosing precisely, and guiding every patient back to a pain-free, active life with patience, skill and honesty.",
   photo:
-    "https://images.pexels.com/photos/19438563/pexels-photo-19438563.jpeg",
+    "https://customer-assets.emergentagent.com/job_clinic-connect-196/artifacts/vft1a54x_Dr.%20Bhaskar.jpeg",
   clinicPhoto:
     "https://images.pexels.com/photos/12081340/pexels-photo-12081340.jpeg",
 };
 
 export const CLINIC = {
-  name: "Sharma Heart Care Clinic",
-  addressLine1: "402, Sunshine Medical Plaza",
-  addressLine2: "Linking Road, Bandra West",
-  city: "Mumbai",
-  state: "Maharashtra",
-  pincode: "400050",
-  phone: "+91 98765 43210",
-  phoneRaw: "+919876543210",
-  whatsapp: "919876543210", // digits only for wa.me
-  email: "care@sharmahealthcare.in",
-  emergencyPhone: "+91 98765 43210",
+  name: "Healing Hands Physiotherapy Clinic",
+  addressLine1: "Newtown, Madanapalli",
+  addressLine2: "Jamtara",
+  city: "Jamtara",
+  state: "Jharkhand",
+  pincode: "",
+  phone: "+91 78705 05926",
+  phoneRaw: "+917870505926",
+  whatsapp: "917870505926", // digits only for wa.me
+  email: "bhaskarchand7870@gmail.com",
+  emergencyPhone: "+91 78705 05926",
   hours: [
-    { day: "Mon – Fri", time: "9:00 AM – 7:00 PM" },
-    { day: "Saturday", time: "9:00 AM – 2:00 PM" },
-    { day: "Sunday", time: "Emergency only" },
+    { day: "Mon – Sat", time: "9:00 AM – 7:00 PM" },
+    { day: "Sunday", time: "9:00 AM – 1:00 PM" },
   ],
   mapsEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15087.47!2d72.8278!3d19.0596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c0f89c9c9d%3A0x0!2sBandra%20West%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1700000000000",
+    "https://www.google.com/maps?q=Jamtara%2C%20Jharkhand&output=embed",
 };
 
+// Professional roles & foundations
+export const ROLES = [
+  {
+    title: "Director",
+    org: "Healing Hands Physiotherapy Centre, Jamtara",
+    icon: "Building2",
+  },
+  {
+    title: "Central Head — Jharkhand",
+    org: "Physio Art Welfare Foundation",
+    icon: "Landmark",
+  },
+];
+
 export const ACHIEVEMENTS = [
-  "Over 5,000 successful cardiac consultations",
-  "Performed 1,200+ angioplasty procedures",
-  "Fellow of the Cardiological Society of India",
-  "Published in 20+ peer-reviewed journals",
-  "Trained at AIIMS New Delhi & Cleveland Clinic",
+  { title: "Young Physio Achiever Award", year: "2026" },
+  { title: "Excellence Doctor Award", year: "" },
+  { title: "Chikitsa Ratna Award", year: "2024" },
+];
+
+export const QUALIFICATIONS = [
+  {
+    code: "BPT",
+    title: "Bachelor of Physiotherapy",
+    desc: "Foundational clinical training in physiotherapy and rehabilitation sciences.",
+  },
+  {
+    code: "MPT (Ortho)",
+    title: "Master of Physiotherapy — Orthopaedics",
+    desc: "Specialisation in bone, joint, muscle and post-fracture conditions.",
+  },
+  {
+    code: "COMT",
+    title: "Certified Orthopaedic Manual Therapist",
+    desc: "Advanced hands-on techniques for spine, shoulder and joint disorders.",
+  },
+  {
+    code: "CDNP",
+    title: "Certified Dry Needling Practitioner",
+    desc: "Precision trigger-point release for chronic pain and muscle tightness.",
+  },
+  {
+    code: "CSCS",
+    title: "Certified Strength & Conditioning Specialist",
+    desc: "Evidence-based strength programs for recovery, performance and injury prevention.",
+  },
 ];
 
 export const SERVICES = [
   {
-    icon: "HeartPulse",
-    title: "Cardiac Consultation",
+    icon: "Bone",
+    title: "Orthopaedic Physiotherapy",
     description:
-      "Comprehensive evaluation of heart health, risk assessment, and personalised treatment plans for every stage of life.",
+      "Targeted treatment for back pain, neck pain, arthritis and post-fracture rehabilitation — tailored to your recovery goals.",
+  },
+  {
+    icon: "Hand",
+    title: "Manual Therapy",
+    description:
+      "Skilled hands-on techniques (COMT) for spinal, joint and soft-tissue pain relief without reliance on medication.",
+  },
+  {
+    icon: "Syringe",
+    title: "Dry Needling",
+    description:
+      "Precision dry needling (CDNP) to release myofascial trigger points and restore muscle function quickly.",
+  },
+  {
+    icon: "Dumbbell",
+    title: "Sports Rehabilitation",
+    description:
+      "Return-to-sport programs for athletes — strength, mobility and injury-prevention rooted in sports science.",
   },
   {
     icon: "Activity",
-    title: "ECG & Echocardiography",
+    title: "Strength & Conditioning",
     description:
-      "Same-day, high-resolution ECG and Echo studies to accurately diagnose arrhythmias and structural heart conditions.",
+      "CSCS-backed training to rebuild strength, stability and endurance after injury, surgery or long inactivity.",
   },
   {
-    icon: "Stethoscope",
-    title: "Angioplasty & Stenting",
+    icon: "ShieldCheck",
+    title: "Post-Surgical Recovery",
     description:
-      "Minimally invasive coronary interventions performed at accredited hospital partners with rapid recovery.",
-  },
-  {
-    icon: "ShieldHeart",
-    title: "Hypertension Management",
-    description:
-      "Long-term blood pressure control through medication tuning, lifestyle coaching and remote monitoring.",
-  },
-  {
-    icon: "Droplets",
-    title: "Cholesterol & Lipid Care",
-    description:
-      "Targeted lipid profile management to reduce heart attack and stroke risk using the latest guidelines.",
-  },
-  {
-    icon: "ClipboardHeart",
-    title: "Preventive Heart Screening",
-    description:
-      "Executive heart health packages designed for early detection — ideal for adults above 30 or with family history.",
+      "Structured rehab for post-operative patients — joint replacements, ACL, rotator cuff and spinal surgeries.",
   },
 ];
 
 export const TESTIMONIALS = [
   {
-    name: "Priya Mehta",
-    location: "Bandra, Mumbai",
+    name: "Rohit Kumar",
+    location: "Jamtara",
     text:
-      "Dr. Sharma explained every detail patiently. My father's angioplasty went smoothly and recovery was faster than we expected. Forever grateful.",
+      "My lower back pain vanished after six sessions. Dr. Chand explained every exercise and the dry-needling was practically painless. Highly recommended.",
   },
   {
-    name: "Rohan Iyer",
-    location: "Andheri, Mumbai",
+    name: "Suman Devi",
+    location: "Madanapalli",
     text:
-      "Finally a cardiologist who listens. The clinic is spotless, appointments run on time and the ECG report was ready the same day.",
+      "After my knee replacement I could barely walk. Healing Hands' structured rehab got me walking unaided in weeks. Grateful to the whole team.",
   },
   {
-    name: "Anita Desai",
-    location: "Santacruz, Mumbai",
+    name: "Amit Singh",
+    location: "Jharkhand",
     text:
-      "My blood pressure has been stable for two years under Dr. Sharma's care. Honest advice, no unnecessary tests — exactly what I needed.",
+      "As a local athlete, I needed someone who understood sports injuries. Dr. Chand's conditioning program got me back on the field stronger than before.",
   },
 ];
 
@@ -113,6 +156,8 @@ export const NAV_LINKS = [
 ];
 
 export const buildWhatsAppUrl = (message) => {
-  const text = encodeURIComponent(message || `Hello Dr. Sharma, I'd like to book an appointment.`);
+  const text = encodeURIComponent(
+    message || `Hello Dr. Chand, I'd like to book a physiotherapy appointment.`
+  );
   return `https://wa.me/${CLINIC.whatsapp}?text=${text}`;
 };

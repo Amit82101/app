@@ -22,7 +22,7 @@ export default function Appointment() {
   const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
   const buildMessage = () =>
-    `Hello Dr. Sharma,\n\nI'd like to book an appointment.\n\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nPreferred Date: ${form.date}\nPreferred Time: ${form.time}\n\nMessage: ${form.message || "—"}`;
+    `Hello Dr. Chand,\n\nI'd like to book an appointment.\n\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nPreferred Date: ${form.date}\nPreferred Time: ${form.time}\n\nMessage: ${form.message || "—"}`;
 
   const validate = () => {
     if (!form.name.trim()) return "Please enter your name.";

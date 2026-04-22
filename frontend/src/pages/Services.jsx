@@ -1,23 +1,23 @@
 import { Link } from "react-router-dom";
 import {
-  HeartPulse,
+  Bone,
+  Hand,
+  Syringe,
+  Dumbbell,
   Activity,
-  Stethoscope,
   ShieldCheck,
-  Droplets,
-  ClipboardList,
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
 import { SERVICES } from "../lib/doctor";
 
 const iconMap = {
-  HeartPulse,
+  Bone,
+  Hand,
+  Syringe,
+  Dumbbell,
   Activity,
-  Stethoscope,
-  ShieldHeart: ShieldCheck,
-  Droplets,
-  ClipboardHeart: ClipboardList,
+  ShieldCheck,
 };
 
 export default function Services() {
@@ -29,11 +29,12 @@ export default function Services() {
             Services
           </div>
           <h1 className="mt-3 text-4xl md:text-5xl font-semibold text-[#0F2C59] max-w-3xl mx-auto leading-tight">
-            Heart care, tailored to every stage of life
+            Physiotherapy that moves you forward
           </h1>
           <p className="mt-5 text-[#475569] max-w-2xl mx-auto text-base md:text-lg">
-            From routine screenings to advanced interventions, every treatment is
-            delivered with the same principles — evidence, empathy and clarity.
+            From manual therapy and dry needling to sports rehab and post-surgical
+            recovery, every treatment is delivered with evidence, empathy and
+            clarity.
           </p>
         </div>
       </section>
@@ -41,7 +42,7 @@ export default function Services() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => {
-            const Icon = iconMap[s.icon] || HeartPulse;
+            const Icon = iconMap[s.icon] || Bone;
             return (
               <article
                 key={s.title}
@@ -56,7 +57,7 @@ export default function Services() {
                 <ul className="mt-5 space-y-2">
                   <li className="flex items-start gap-2 text-sm text-[#0F2C59]">
                     <CheckCircle2 className="h-4 w-4 text-[#2563EB] mt-0.5" />
-                    Same-day reports
+                    Personalised treatment plan
                   </li>
                   <li className="flex items-start gap-2 text-sm text-[#0F2C59]">
                     <CheckCircle2 className="h-4 w-4 text-[#2563EB] mt-0.5" />
@@ -71,10 +72,10 @@ export default function Services() {
         <div className="mt-16 rounded-3xl bg-[#E6F4F1] p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold text-[#0F2C59]">
-              Not sure which service you need?
+              Not sure which therapy you need?
             </h2>
             <p className="mt-2 text-[#0F2C59]/80">
-              Book a 20-minute consultation and we'll recommend the right path.
+              Book a 20-minute assessment and we'll recommend the right path.
             </p>
           </div>
           <Link

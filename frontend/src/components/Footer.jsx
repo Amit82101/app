@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HeartPulse, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Bone, MapPin, Phone, Mail, Clock } from "lucide-react";
 import { CLINIC, DOCTOR, NAV_LINKS } from "../lib/doctor";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white">
-              <HeartPulse className="h-5 w-5" />
+              <Bone className="h-5 w-5" />
             </span>
             <div>
               <div className="font-semibold">{DOCTOR.name}</div>
@@ -17,7 +17,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
-            Compassionate, evidence-based heart care in the heart of Mumbai.
+            Advanced orthopaedic physiotherapy & rehabilitation in Jamtara, Jharkhand.
           </p>
         </div>
 

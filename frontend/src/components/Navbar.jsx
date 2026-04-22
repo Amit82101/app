@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
-import { Menu, Phone, HeartPulse } from "lucide-react";
+import { Menu, Phone, Bone } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from "./ui/sheet";
 import { NAV_LINKS, CLINIC } from "../lib/doctor";
 
@@ -34,11 +34,11 @@ export default function Navbar() {
           data-testid="navbar-logo"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#E6F4F1] text-[#0F2C59] group-hover:bg-[#2563EB] group-hover:text-white transition-colors">
-            <HeartPulse className="h-5 w-5" />
+            <Bone className="h-5 w-5" />
           </span>
           <span className="hidden sm:flex flex-col leading-tight">
-            <span className="font-semibold text-[#0F2C59]">Dr. Rajesh Sharma</span>
-            <span className="text-xs text-[#475569]">Cardiologist · Mumbai</span>
+            <span className="font-semibold text-[#0F2C59]">Dr. Bhaskar Chand</span>
+            <span className="text-xs text-[#475569]">Physiotherapist · Jamtara</span>
           </span>
         </Link>
 
@@ -96,10 +96,10 @@ export default function Navbar() {
             <SheetContent side="right" className="w-[85%] sm:w-[380px] bg-white">
               <SheetHeader>
                 <SheetTitle className="text-left text-[#0F2C59] font-semibold">
-                  Dr. Rajesh Sharma
+                  Dr. Bhaskar Chand
                 </SheetTitle>
                 <SheetDescription className="text-left text-[#475569]">
-                  Cardiologist · Mumbai
+                  Physiotherapist · Jamtara
                 </SheetDescription>
               </SheetHeader>
               <div className="mt-6 flex flex-col gap-1">
